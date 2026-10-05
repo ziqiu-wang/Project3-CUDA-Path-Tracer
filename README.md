@@ -43,35 +43,30 @@ This project also integrates CUDA-event timing for the main kernels and an ImGui
 
 The following renders showcase how each material looks on a simple sphere in a Cornell box.
 
-<figure align="center">
-  <img src="img/diffuse.png" width="600">
-  <figcaption>Diffuse white sphere</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/emissive.png" width="600">
-  <figcaption>Emissive sphere</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/specular.png" width="600">
-  <figcaption>Perfectly specular sphere</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/imperfect_specular.png" width="600">
-  <figcaption>Imperfectly specular sphere with a roughness of 0.3</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/imperfect_specular_more.png" width="600">
-  <figcaption>Imperfectly specular sphere with a roughness of 0.7</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/refractive.png" width="600">
-  <figcaption>Dielectric sphere with an IOR of 1.5</figcaption>
-</figure>
+<p align="center">
+  <img src="img/diffuse.png" width="600"><br>
+  <sub>Diffuse white sphere</sub>
+</p>
+<p align="center">
+  <img src="img/emissive.png" width="600"><br>
+  <sub>Emissive sphere</sub>
+</p>
+<p align="center">
+  <img src="img/specular.png" width="600"><br>
+  <sub>Perfectly specular sphere</sub>
+</p>
+<p align="center">
+  <img src="img/imperfect_specular.png" width="600"><br>
+  <sub>Imperfectly specular sphere with a roughness of 0.3</sub>
+</p>
+<p align="center">
+  <img src="img/imperfect_specular_more.png" width="600"><br>
+  <sub>Imperfectly specular sphere with a roughness of 0.7</sub>
+</p>
+<p align="center">
+  <img src="img/refractive.png" width="600"><br>
+  <sub>Dielectric sphere with an IOR of 1.5</sub>
+</p>
 
 
 ### HDR Environment Lighting
@@ -82,15 +77,14 @@ It is important to note that whether environment lighting is turned on or off, t
 
 The following renders showcase the visual effects of environment lighting with two different environment maps downloaded from online.
 
-<figure align="center">
-  <img src="img/cornell_pillar.png" width="600">
-  <figcaption>Pillar environment map</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/cornell_courtyard_night.png" width="600">
-  <figcaption>Courtyard night environment map</figcaption>
-</figure>
+<p align="center">
+  <img src="img/cornell_pillar.png" width="600"><br>
+  <sub>Pillar environment map</sub>
+</p>
+<p align="center">
+  <img src="img/cornell_courtyard_night.png" width="600"><br>
+  <sub>Courtyard night environment map</sub>
+</p>
 
 Notice how the cornell box with the courtyard night environment map suffers from fireflies due to the extremely bright spots in the map. It will thus be beneficial to implement multiple importance sampling (MIS) to reduce such visual artifacts.
 
@@ -103,25 +97,22 @@ Since the implementation of this feature only involves changing the ray origins 
 
 The following renders showcase the visual effects of depth of field with different aperture sizes and focal distances in a scene with two piano meshes (one refractive with an IOR of 1.5 and the other imperfectly specular with a roughness of 0.5). You may read the exact numbers for aperture size and focal distance in the ImGui window at the top left.
 
-<figure align="center">
-  <img src="img/no_dof.png" width="600">
-  <figcaption>Depth of field OFF</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/small_ap_small_fd.png" width="600">
-  <figcaption>Small aperture, small focal distance</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/big_ap_small_fd.png" width="600">
-  <figcaption>Large aperture, small focal distance</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/small_ap_big_fd.png" width="600">
-  <figcaption>Small aperture, large focal distance</figcaption>
-</figure>
+<p align="center">
+  <img src="img/no_dof.png" width="600"><br>
+  <sub>Depth of field OFF</sub>
+</p>
+<p align="center">
+  <img src="img/small_ap_small_fd.png" width="600"><br>
+  <sub>Small aperture, small focal distance</sub>
+</p>
+<p align="center">
+  <img src="img/big_ap_small_fd.png" width="600"><br>
+  <sub>Large aperture, small focal distance</sub>
+</p>
+<p align="center">
+  <img src="img/small_ap_big_fd.png" width="600"><br>
+  <sub>Small aperture, large focal distance</sub>
+</p>
 
 ### Stochastic Anti-aliasing
 
@@ -129,16 +120,12 @@ Stochastic anti-aliasing uniformly jitters each camera ray to a random subpixel 
 
 The following renders show how a portion of a diffuse sphere looks without or with anti-aliasing enabled. It can be seen in the second image that the edge of the sphere is slightly blurrier and much less jagged.
 
-<p float="left">
-  <figure style="display: inline-block; width: 49%; margin: 0;">
-    <img src="img/No_AA.png" width="100%" />
-    <figcaption align="center">Without Anti-aliasing</figcaption>
-  </figure>
-  <figure style="display: inline-block; width: 47%; margin: 0;">
-    <img src="img/With_AA.png" width="100%" />
-    <figcaption align="center">With Anti-aliasing</figcaption>
-  </figure>
-</p>
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top"><img src="img/No_AA.png" width="100%"><br><sub>Without Anti-aliasing</sub></td>
+    <td width="48%" align="center" valign="top"><img src="img/With_AA.png" width="100%"><br><sub>With Anti-aliasing</sub></td>
+  </tr>
+</table>
 
 ### OBJ Mesh Loading & BVH
 
@@ -152,27 +139,25 @@ Acceleration through BVH is togglable in the ImGui window. When it is turned off
 
 The following renders contain various OBJ meshes downloaded from online, accelerated with BVH.
 
-<figure align="center">
-  <img src="img/pianos_environment.png" width="600">
-  <figcaption>Two pianos, each with 284900 triangles, 1600x1600</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/relax_tea_table_close.png" width="600">
-  <figcaption>Tea table, 15 OBJ files, 17 meshes totaling ~65000 triangles, 1600x1600</figcaption>
-</figure>
+<p align="center">
+  <img src="img/pianos_environment.png" width="600"><br>
+  <sub>Two pianos, each with 284900 triangles, 1600x1600</sub>
+</p>
+<p align="center">
+  <img src="img/relax_tea_table_close.png" width="600"><br>
+  <sub>Tea table, 15 OBJ files, 17 meshes totaling ~65000 triangles, 1600x1600</sub>
+</p>
 
 BVH is best for complex scenes and meshes with many primitives. The performance benefit of using BVH is shown in the graphs below.
 
-<figure align="center">
-  <img src="img/performance/bvh_total_frame_time.png" width="900">
-  <figcaption>Average total frame time with and without BVH</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/performance/bvh_timing_breakdown.png" width="900">
-  <figcaption>Breakdown of frame time (kernel times + other)</figcaption>
-</figure>
+<p align="center">
+  <img src="img/performance/bvh_total_frame_time.png" width="900"><br>
+  <sub>Average total frame time with and without BVH</sub>
+</p>
+<p align="center">
+  <img src="img/performance/bvh_timing_breakdown.png" width="900"><br>
+  <sub>Breakdown of frame time (kernel times + other)</sub>
+</p>
 
 The timing data used to plot these graphs are shown in the table below. All tests had stream compaction and material sorting turned on. Times are average milliseconds per frame, so lower is better. `N/A` indicates that the path tracer was too slow to provide a meaningful kernel breakdown with BVH off; however, since we know that turning BVH off only affects the scene traversal component of the kernel for computing intersections on the GPU, the drastic slowdown must have been caused only by this kernel. Also note that the Cornell scenes has a resolution of 800x800 while the two-piano and tea-table scenes are 1600x1600.
 
@@ -200,15 +185,14 @@ This optimization is togglable in the ImGui window (default is on). When it is t
 
 Compaction adds the cost of examining and moving paths after each bounce, but becomes especially beneficial as paths terminate at different depths because it avoids repeatedly launching work for inactive paths and thus keeping some threads idle. The graphs below compare the performance benefits of stream compaction in open versus closed Cornell boxes and tea-table scene. All measurements use BVH with material sorting disabled. With compaction disabled, every bounce still launches the original 640000 paths for Cornell or 2560000 paths for tea table. Bounce 8 is shown as zero with compaction on because it is the configured maximum path depth.
 
-<figure align="center">
-  <img src="img/performance/stream_compaction_active_paths.png" width="900">
-  <figcaption>Number of active paths remaining after each bounce with stream compaction enabled</figcaption>
-</figure>
-<br>
-<figure align="center">
-  <img src="img/performance/stream_compaction_timing_breakdown.png" width="900">
-  <figcaption>Breakdown of average frame time with or without stream compaction enabled</figcaption>
-</figure>
+<p align="center">
+  <img src="img/performance/stream_compaction_active_paths.png" width="900"><br>
+  <sub>Number of active paths remaining after each bounce with stream compaction enabled</sub>
+</p>
+<p align="center">
+  <img src="img/performance/stream_compaction_timing_breakdown.png" width="900"><br>
+  <sub>Breakdown of average frame time with or without stream compaction enabled</sub>
+</p>
 
 The active path counts used in the first graph are shown in the table below.
 
@@ -267,10 +251,10 @@ After intersection testing, each active path receives a key corresponding to the
 
 The graphs below show the performance impact of material sorting in scenes with different material complexity: closed Cornell box and closed tea-table scene.
 
-<figure align="center">
-  <img src="img/performance/material_sorting_timing_breakdown.png" width="900">
-  <figcaption>Average frame-time breakdown with material sorting on and off</figcaption>
-</figure>
+<p align="center">
+  <img src="img/performance/material_sorting_timing_breakdown.png" width="900"><br>
+  <sub>Average frame-time breakdown with material sorting on and off</sub>
+</p>
 
 Both scenes have stream compaction and BVH enabled. The Cornell scene still renders at 800x800 with only diffuse, emissive, and perfectly specular materials, while the more complex tea-table scene renders at 1600x1600 and contains various materials. The data used to create these graphs are shown below.
 
