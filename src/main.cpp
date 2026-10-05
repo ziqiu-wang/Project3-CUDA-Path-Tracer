@@ -270,7 +270,7 @@ void RenderImGui()
     static float f = 0.0f;
     static int counter = 0;
 
-    ImGui::SetNextWindowSize(ImVec2(380.0f, 400.0f), ImGuiCond_Once); // makes the window larger
+    ImGui::SetNextWindowSize(ImVec2(380.0f, 550.0f), ImGuiCond_Once); // makes the window larger
     ImGui::Begin("Path Tracer Analytics");                  // Create a window called "Hello, world!" and append into it.
     
     // LOOK: Un-Comment to check the output window and usage

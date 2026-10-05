@@ -36,7 +36,7 @@
     "Camera":
     {
         "RES":[1600, 1600],
-        "FOVY":55.0,
+        "FOVY":45.0,
         "ITERATIONS":5000,
         "DEPTH":12,
         "FILE":"piano_environment",
