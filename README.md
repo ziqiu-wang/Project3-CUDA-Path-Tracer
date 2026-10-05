@@ -43,30 +43,20 @@ This project also integrates CUDA-event timing for the main kernels and an ImGui
 
 The following renders showcase how each material looks on a simple sphere in a Cornell box.
 
-<p align="center">
-  <img src="img/diffuse.png" width="600"><br>
-  <sub>Diffuse white sphere</sub>
-</p>
-<p align="center">
-  <img src="img/emissive.png" width="600"><br>
-  <sub>Emissive sphere</sub>
-</p>
-<p align="center">
-  <img src="img/specular.png" width="600"><br>
-  <sub>Perfectly specular sphere</sub>
-</p>
-<p align="center">
-  <img src="img/imperfect_specular.png" width="600"><br>
-  <sub>Imperfectly specular sphere with a roughness of 0.3</sub>
-</p>
-<p align="center">
-  <img src="img/imperfect_specular_more.png" width="600"><br>
-  <sub>Imperfectly specular sphere with a roughness of 0.7</sub>
-</p>
-<p align="center">
-  <img src="img/refractive.png" width="600"><br>
-  <sub>Dielectric sphere with an IOR of 1.5</sub>
-</p>
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top"><img src="img/diffuse.png" width="100%"><br><sub>Diffuse white sphere</sub></td>
+    <td width="50%" align="center" valign="top"><img src="img/emissive.png" width="100%"><br><sub>Emissive sphere</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><img src="img/specular.png" width="100%"><br><sub>Perfectly specular sphere</sub></td>
+    <td width="50%" align="center" valign="top"><img src="img/imperfect_specular.png" width="100%"><br><sub>Imperfectly specular sphere with a roughness of 0.3</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><img src="img/imperfect_specular_more.png" width="100%"><br><sub>Imperfectly specular sphere with a roughness of 0.7</sub></td>
+    <td width="50%" align="center" valign="top"><img src="img/refractive.png" width="100%"><br><sub>Dielectric sphere with an IOR of 1.5</sub></td>
+  </tr>
+</table>
 
 
 ### HDR Environment Lighting
@@ -77,14 +67,12 @@ It is important to note that whether environment lighting is turned on or off, t
 
 The following renders showcase the visual effects of environment lighting with two different environment maps downloaded from online.
 
-<p align="center">
-  <img src="img/cornell_pillar.png" width="600"><br>
-  <sub>Pillar environment map</sub>
-</p>
-<p align="center">
-  <img src="img/cornell_courtyard_night.png" width="600"><br>
-  <sub>Courtyard night environment map</sub>
-</p>
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top"><img src="img/cornell_pillar.png" width="100%"><br><sub>Pillar environment map</sub></td>
+    <td width="50%" align="center" valign="top"><img src="img/cornell_courtyard_night.png" width="100%"><br><sub>Courtyard night environment map</sub></td>
+  </tr>
+</table>
 
 Notice how the cornell box with the courtyard night environment map suffers from fireflies due to the extremely bright spots in the map. It will thus be beneficial to implement multiple importance sampling (MIS) to reduce such visual artifacts.
 
@@ -97,22 +85,16 @@ Since the implementation of this feature only involves changing the ray origins 
 
 The following renders showcase the visual effects of depth of field with different aperture sizes and focal distances in a scene with two piano meshes (one refractive with an IOR of 1.5 and the other imperfectly specular with a roughness of 0.5). You may read the exact numbers for aperture size and focal distance in the ImGui window at the top left.
 
-<p align="center">
-  <img src="img/no_dof.png" width="600"><br>
-  <sub>Depth of field OFF</sub>
-</p>
-<p align="center">
-  <img src="img/small_ap_small_fd.png" width="600"><br>
-  <sub>Small aperture, small focal distance</sub>
-</p>
-<p align="center">
-  <img src="img/big_ap_small_fd.png" width="600"><br>
-  <sub>Large aperture, small focal distance</sub>
-</p>
-<p align="center">
-  <img src="img/small_ap_big_fd.png" width="600"><br>
-  <sub>Small aperture, large focal distance</sub>
-</p>
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top"><img src="img/no_dof.png" width="100%"><br><sub>Depth of field OFF</sub></td>
+    <td width="50%" align="center" valign="top"><img src="img/small_ap_small_fd.png" width="100%"><br><sub>Small aperture, small focal distance</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><img src="img/big_ap_small_fd.png" width="100%"><br><sub>Large aperture, small focal distance</sub></td>
+    <td width="50%" align="center" valign="top"><img src="img/small_ap_big_fd.png" width="100%"><br><sub>Small aperture, large focal distance</sub></td>
+  </tr>
+</table>
 
 ### Stochastic Anti-aliasing
 
@@ -139,14 +121,12 @@ Acceleration through BVH is togglable in the ImGui window. When it is turned off
 
 The following renders contain various OBJ meshes downloaded from online, accelerated with BVH.
 
-<p align="center">
-  <img src="img/pianos_environment.png" width="600"><br>
-  <sub>Two pianos, each with 284900 triangles, 1600x1600</sub>
-</p>
-<p align="center">
-  <img src="img/relax_tea_table_close.png" width="600"><br>
-  <sub>Tea table, 15 OBJ files, 17 meshes totaling ~65000 triangles, 1600x1600</sub>
-</p>
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top"><img src="img/pianos_environment.png" width="100%"><br><sub>Two pianos, each with 284900 triangles, 1600x1600</sub></td>
+    <td width="50%" align="center" valign="top"><img src="img/relax_tea_table_close.png" width="100%"><br><sub>Tea table, 15 OBJ files, 17 meshes totaling ~65000 triangles, 1600x1600</sub></td>
+  </tr>
+</table>
 
 BVH is best for complex scenes and meshes with many primitives. The performance benefit of using BVH is shown in the graphs below.
 
